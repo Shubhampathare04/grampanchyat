@@ -1,0 +1,1027 @@
+style.css  /* General Reset */
+body {
+  margin: 0;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  background: #f4f7fb;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #2e7d32;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background: #1b4f1b;
+  color: #ffd700;
+}
+
+/* Hamburger Menu Button (for mobile) */
+.navbar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar .menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* Mobile Responsive Navbar */
+@media screen and (max-width: 900px) {
+  .navbar ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #2e7d32;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px 0;
+    display: none; /* hide initially */
+    border-radius: 10px 0 0 10px;
+    box-shadow: -4px 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .navbar ul.show {
+    display: flex; /* show when toggled */
+  }
+
+  .navbar .menu-toggle {
+    display: flex;
+  }
+}
+
+
+/* Stats Section */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+/* Stats Card */
+.stats .card {
+  background: linear-gradient(145deg, #ffffff, #e9f0ea);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Card hover effect */
+.stats .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+  background: linear-gradient(145deg, #d4e4d1, #a2c59f);
+}
+
+/* Icon inside card */
+.stats .card i {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  transition: transform 0.4s, color 0.4s;
+}
+
+.stats .card:hover i {
+  transform: scale(1.2);
+  color: #ffc414;
+}
+
+/* Card title */
+.stats .card h3 {
+  font-size: 1.6rem;
+  color: #2e7d32;
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+/* Card description */
+.stats .card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .stats .card {
+    padding: 25px 15px;
+  }
+
+  .stats .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .stats .card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Stats Section - Larger & Stylish */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+/* Stats Card */
+.stats .card {
+  background: linear-gradient(145deg, #ffffff, #e9f0ea);
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.stats .card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+  background: linear-gradient(145deg, #d4e4d1, #a2c59f);
+}
+
+/* Icon inside card */
+.stats .card i {
+  font-size: 3rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  transition: transform 0.4s, color 0.4s;
+}
+
+.stats .card:hover i {
+  transform: scale(1.2);
+  color: #ffc414;
+}
+
+/* Card title */
+.stats .card h3 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin: 18px 0;
+  font-weight: 800;
+}
+
+/* Card description */
+.stats .card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  padding: 0 15px;
+}
+
+/* Gav Info Section - Larger & Prominent */
+.gav-info {
+  text-align: center;
+  padding: 120px 20px; /* increased vertical padding */
+  background: #f9fdf9;  /* soft background for contrast */
+}
+
+.gav-info h2 {
+  font-size: 3rem;      /* increased heading size */
+  color: #2e7d32;
+  font-weight: 900;
+  margin-bottom: 30px;  /* more space below heading */
+}
+
+.gav-info h2::after {
+  content: "";
+  display: block;
+  width: 80px;          /* wider underline */
+  height: 4px;
+  background: orange;
+  margin: 12px auto;
+  border-radius: 3px;
+}
+
+/* Info Box */
+.info-box {
+  max-width: 1100px;           /* wider box */
+  margin: 50px auto 0;         /* more top margin */
+  background: linear-gradient(145deg, #ffffff, #e0f0d9);
+  padding: 45px 40px;          /* bigger padding */
+  border-radius: 25px;         /* rounder corners */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2); /* deeper shadow */
+  text-align: left;
+  line-height: 2.2;            /* more readable line spacing */
+  font-size: 1.2rem;           /* slightly bigger text */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.25);
+}
+
+/* Responsive Adjustments */
+.gav-info {
+  text-align: center;
+  padding: 150px 20px;  /* vertical padding वाढवले */
+  background: #f9fdf9;  /* soft background */
+}
+
+.gav-info h2 {
+  font-size: 3.5rem;    /* heading size वाढवले */
+  color: #2e7d32;
+  font-weight: 900;
+  margin-bottom: 40px;  /* heading खाली spacing वाढवली */
+}
+
+.gav-info h2::after {
+  content: "";
+  display: block;
+  width: 100px;         /* underline width वाढवली */
+  height: 5px;
+  background: orange;
+  margin: 15px auto;
+  border-radius: 3px;
+}
+
+/* Info Box */
+.info-box {
+  max-width: 1200px;      /* box width वाढवली */
+  margin: 50px auto 0;
+  background: linear-gradient(145deg, #ffffff, #e0f0d9);
+  padding: 50px 50px;     /* padding वाढवले */
+  border-radius: 30px;    /* rounder corners */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25); /* shadow मोठा */
+  text-align: left;
+  line-height: 2.4;       /* readability वाढवली */
+  font-size: 1.3rem;      /* text size वाढवले */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .gav-info h2 { font-size: 3rem; }
+  .info-box { padding: 40px 30px; font-size: 1.2rem; }
+}
+
+@media screen and (max-width: 768px) {
+  .gav-info { padding: 100px 15px; }
+  .gav-info h2 { font-size: 2.5rem; }
+  .info-box { padding: 25px 20px; font-size: 1.1rem; }
+}
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .gav-info h2 {
+    font-size: 2.5rem;
+  }
+  .info-box {
+    padding: 35px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gav-info {
+    padding: 80px 15px;
+  }
+  .gav-info h2 {
+    font-size: 2rem;
+  }
+  .info-box {
+    padding: 25px 15px;
+    font-size: 1rem;
+  }
+}
+
+/* मुख्य योजना Section */
+.schemes {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fdfdfd, #f5f9f7);
+  text-align: center;
+}
+
+.schemes h2 {
+  font-size: 2.4rem;
+  color: #2e7d32;
+  margin-bottom: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.schemes h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: orange;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Row Layout */
+.scheme-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Scheme Cards */
+.scheme-card {
+  flex: 1 1 220px;       /* प्रत्येक कार्ड min 220px */
+  max-width: 260px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scheme-card i {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.scheme-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.scheme-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+/* Hover Effects */
+.scheme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+  background: #fdfdfd;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .scheme-card {
+    flex: 1 1 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scheme-card {
+    flex: 1 1 45%;  /* Tablet वर दोन box एका row मध्ये */
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .scheme-card {
+    flex: 1 1 100%; /* Mobile वर full width */
+    max-width: 100%;
+  }
+}
+
+
+/* प्रमाणपत्रे Section */
+.certificates {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff, #f7faf9);
+  text-align: center;
+}
+
+.certificates h2 {
+  font-size: 2.4rem;
+  color: #2e7d32;
+  margin-bottom: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.certificates h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: orange;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Responsive Grid */
+.certificate-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Certificate Card */
+.certificate-card {
+  flex: 1 1 220px;        /* min 220px card size */
+  max-width: 260px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card i {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.certificate-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.certificate-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+  background: #fdfdfd;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+  .certificate-card {
+    flex: 1 1 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .certificate-card {
+    flex: 1 1 45%;  /* Tablet वर 2 card per row */
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .certificate-card {
+    flex: 1 1 100%; /* Mobile वर 1 card per row */
+    max-width: 100%;
+  }
+}
+
+/* कर भरणा */
+.tax {
+  padding: 60px 20px;
+  text-align: center;
+}
+.tax h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+}
+.tax h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: orange;
+  margin: 8px auto;
+  border-radius: 2px;
+}
+.tax-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+.tax-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.tax-card:hover {
+  transform: translateY(-5px);
+}
+.tax-card img {
+  width: 100%;
+  height: 180px;
+  object-fit:contain;
+}
+.tax-content {
+  padding: 20px;
+  text-align: center;
+}
+.tax-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+.tax-content p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn.green { background: #1976d2; }
+.btn.green:hover { background: #2e7d32; }
+.btn.blue { background: #1976d2; }
+.btn.blue:hover { background: #2e7d32; }
+
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Close button */
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* QR image */
+.qr-img {
+  width: 200px;
+  max-width: 100%;
+  margin: 15px 0;
+}
+
+/* Input */
+#payerName {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* विकास कामे */
+.vikas {
+  padding: 60px 20px;
+  text-align: center;
+}
+.vikas h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+}
+.vikas h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: orange;
+  margin: 8px auto;
+  border-radius: 2px;
+}
+.vikas-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.vikas-card {
+  display: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.vikas-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.vikas-content {
+  padding: 15px;
+}
+.vikas-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+.vikas-content p {
+  font-size: 0.95rem;
+  color: #666;
+}
+.vikas-card.active {
+  display: block;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+.arrow:hover { background: rgba(0,0,0,0.7); }
+
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 40px;
+  height: 500px;   /* आवश्यकतेनुसार height adjust करा */
+  background: #fdfdfe;
+  gap: 40px;       /* image आणि text मधला अंतर */
+}
+
+.hero-container {
+  display:flex;
+  width: 100%;  height: 80%;
+  border-radius: 10px;
+}
+
+/* Left side small image at top-left corner */
+.hero-image {
+  width: 500px;       /* small size for corner */
+  height: 500px;
+  background: url("images/Subject.png") no-repeat top left;
+  background-size:contain;   /* keeps image clear */
+  border-radius:0%; /* optional rounded corners */
+}
+
+/* Hero Section Box */
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 40px;
+  background: rgba(89, 140, 42, 0.9); /* semi-transparent green */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4); /* added shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 600px; /* box width */
+}
+
+.hero-text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5); /* stronger shadow on hover */
+}
+
+
+/* Hero Section Text */
+.hero-text h1 {
+  font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffc414;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.5); /* added shadow */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+
+.hero-text p {
+  font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif;
+  font-size: rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.karyakari {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.karyakari h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Grid for small members */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Default Card */
+.member-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.member-card h3 {
+  margin-bottom: 10px;
+  color: #16a085;
+}
+
+.member-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Highlighted big cards (Sarpanch & Upsarpanch) */
+.member-card.highlight.big {
+  max-width: 600px;
+  margin: 15px auto;
+  background: linear-gradient(135deg, #e8f7f0, #d1f2eb);
+  border: 2px solid #16a085;
+  font-size: 1.1rem;
+}
+
+/* Small Cards (Other members) */
+.member-card.small {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+.employees {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.employees h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* Main Roles Row */
+.main-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+.employee-card {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.employee-card h3 {
+  margin-bottom: 10px;
+  color: #ee5700ae;
+}
+.employee-card p {
+  margin: 3px 0;
+  color: #34495e;
+  font-size: 14px;
+}
+
+.employee-card.highlight {
+  font-size: 16px;
+  border: 2px solid #e67e22;
+  background-color: #fff7f0;
+}
+
+.employee-card.small {
+  font-size: 14px;
+}
+
+
+.contact {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-map {
+  flex: 1 1 400px;
+  min-height: 300px;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+
+/* Footer Section */
+.footer {
+  background: #2e7d32;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-box {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ffc414;
+}
+
+.footer-box p, 
+.footer-box a {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.footer-box a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 20px;
+}
+
+/* Responsive Footer */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-box { min-width: 100%; }
+}
